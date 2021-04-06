@@ -14,5 +14,5 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
-        run: echo Hello, world!
+      - name: Indicate that this is the template syntax workflow
+        run: echo Hello from the template syntax workflow.
