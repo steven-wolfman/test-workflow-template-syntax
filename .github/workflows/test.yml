@@ -1,0 +1,18 @@
+# This workflow uses $default-branch, which in theory is usable only in workflow templates.
+
+name: Test template syntax in standard workflow.
+
+# Controls when the action will run. 
+on:
+  # HERE is the workflow template syntax: $default-branch rather than, in this case, main
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo Hello, world!
