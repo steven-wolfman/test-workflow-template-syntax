@@ -1,0 +1,18 @@
+# This workflow uses main, which is what $default-branch would resolve to had I instatiated a starter template.
+
+name: Compare to standard workflow syntax.
+
+# Controls when the action will run. 
+on:
+  # HERE is the non-workflow-template syntax: main rather than $default-branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Indicate that this is the standard workflow syntax workflow
+        run: echo Hello from the STANDARD workflow syntax workflow.
